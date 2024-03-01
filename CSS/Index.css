@@ -1,0 +1,73 @@
+/*----Nav bar section----*/
+/* Container for the nav bar*/
+.topnav{
+overflow: hidden;
+background-color: #333;
+}
+
+/*Links inside the Navbar*/
+.topnav a{
+float: left;
+text-align: center;
+padding: 13px;
+font-size: 17px;
+
+}
+
+/*On hover*/
+.topnav a:hover{
+
+}
+
+/* Right-aligned section inside the top navigation */
+.topnav-right {
+  float: right;
+}
+
+/*Container for the dropdown*/
+.dropdown{
+    float: left;
+    overflow: hidden;
+    background-color: #333;
+}
+
+/*Controls the button itself*/
+.dropdown .dropdwn{
+    font-size: 16px;
+    border:none;
+    outline: none;
+    padding: 14px 16px;
+    font-family:inherit;
+    margin:0;
+}
+
+/*Controls the look of the dropdowns content*/
+.dropdown-content{
+    display:none;
+    position:absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px;
+    z-index: 1;
+}
+
+.dropdown-content a{
+    float:none;
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display:block;
+    text-align: left;
+}
+.dropdown-content a:hover {
+    background-color: #ddd;
+  }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*Body*/
+body{
+font-family: Arial, Helvetica, sans-serif;
+}
