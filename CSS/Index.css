@@ -16,7 +16,7 @@ font-size: 17px;
 
 /*On hover*/
 .topnav a:hover{
-
+    color: red;
 }
 
 /* Right-aligned section inside the top navigation */
