@@ -1,8 +1,25 @@
+/*Body*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    }
+
+.container{
+    padding: 0;
+}
+
+/*Header*/
+.header{
+    text-align: center;
+    
+}
+
 /*----Nav bar section----*/
 /* Container for the nav bar*/
 .topnav{
 overflow: hidden;
 background-color: #333;
+
 }
 
 /*Links inside the Navbar*/
@@ -67,7 +84,13 @@ font-size: 17px;
     display: block;
 }
 
-/*Body*/
-body{
-font-family: Arial, Helvetica, sans-serif;
+/*This will come into play when the user has scrolled on the page and will be removed when it is not.*/
+.sticky{
+    position: fixed;
+    top:0;
+    width: 100%;
+}
+
+.main{
+    clear: both;
 }
