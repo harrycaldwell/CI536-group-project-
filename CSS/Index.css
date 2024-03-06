@@ -8,6 +8,20 @@ body{
     padding: 0;
 }
 
+.main{
+    clear: both;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+}
+
 /*Header*/
 .header{
     text-align: center;
@@ -18,7 +32,7 @@ body{
 /* Container for the nav bar*/
 .topnav{
 overflow: hidden;
-background-color: #333;
+
 
 }
 
@@ -33,19 +47,30 @@ font-size: 17px;
 
 /*On hover*/
 .topnav a:hover{
-    color: red;
+    color:#0a0a0a;
 }
 
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
 }
+/* Styling for the "Login" and "Sign Up" buttons */
+.login{
+    border-radius: 12px; /* Rounded corners */
+    background-color: blue;
+    color: white; /* Text color */
+    padding: 10px 20px; /* Adjust padding as needed */
+    clear: both;
+}
 
 /*Container for the dropdown*/
 .dropdown{
     float: left;
     overflow: hidden;
-    background-color: #333;
+}
+
+.dropdwn{
+    background-color: white;
 }
 
 /*Controls the button itself*/
@@ -62,10 +87,11 @@ font-size: 17px;
 .dropdown-content{
     display:none;
     position:absolute;
-    background-color: #f9f9f9;
+    background-color: #6290cb;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px;
     z-index: 1;
+    text-decoration: none;
 }
 
 .dropdown-content a{
@@ -77,12 +103,21 @@ font-size: 17px;
     text-align: left;
 }
 .dropdown-content a:hover {
-    background-color: #ddd;
+    background-color: #1c2541;
   }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+/* Remove underline from links */
+.topnav a,
+.dropdown-content a,
+.footer a {
+    text-decoration: none;
+    color:#0a0a0a;
+}
+
 
 /*This will come into play when the user has scrolled on the page and will be removed when it is not.*/
 .sticky{
@@ -91,6 +126,3 @@ font-size: 17px;
     width: 100%;
 }
 
-.main{
-    clear: both;
-}
