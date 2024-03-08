@@ -55,12 +55,20 @@ font-size: 17px;
   float: right;
 }
 /* Styling for the "Login" and "Sign Up" buttons */
-.login{
-    border-radius: 12px; /* Rounded corners */
-    background-color: blue;
+.login, .sign_up {
+    border-radius: 65px; /* Half of the button's height */
+    background-color: #6290cb;
     color: white; /* Text color */
-    padding: 10px 20px; /* Adjust padding as needed */
-    clear: both;
+    padding: 2px 6p; /* Adjust padding as needed */
+    margin-left: 10px; /* Adjust margin as needed */
+    text-decoration: none; /* Remove underline */
+    line-height: 10px; /* Adjust line height */
+    display: inline-block; /* Ensure inline-block to apply line-height */
+    vertical-align: middle; /* Vertically center the text */
+}
+
+.sign_up{
+    margin-right: 7px;
 }
 
 /*Container for the dropdown*/
@@ -116,13 +124,5 @@ font-size: 17px;
 .footer a {
     text-decoration: none;
     color:#0a0a0a;
-}
-
-
-/*This will come into play when the user has scrolled on the page and will be removed when it is not.*/
-.sticky{
-    position: fixed;
-    top:0;
-    width: 100%;
 }
 
