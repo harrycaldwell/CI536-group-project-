@@ -42,3 +42,12 @@ body {
 .loginbox input[type="submit"]:hover {
     background-color: #6290cb;
 }
+#HomeButton{
+    display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #1c2541;
+    
+    
+}
