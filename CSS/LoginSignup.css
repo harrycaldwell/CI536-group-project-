@@ -1,6 +1,6 @@
 
 
-
+/*----Shared Styles-----*/
 .LogInSignUp{   /*Body ID for Sign up and Log In*/
     font-family: Arial, sans-serif;
     margin: 0;
@@ -11,6 +11,15 @@
     align-items: center;
     height: 100vh;
 }
+#HomeButton{
+    display: block;
+  text-align: center;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #1c2541;   
+}
+
+/*-----Login Style-----*/
 .loginbox {
     background-color: #F0f6f6;
     border: 2px solid #1c2541;
@@ -45,13 +54,7 @@
 .loginbox input[type="submit"]:hover {
     background-color: #6290cb;
 }
-#HomeButton{
-    display: block;
-  text-align: center;
-  margin-top: 20px;
-  text-decoration: none;
-  color: #1c2541;   
-}
+
 /*------Sign up style------*/
 .Signup-wrapper{
     display: flex;
