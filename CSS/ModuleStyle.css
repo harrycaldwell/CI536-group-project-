@@ -110,3 +110,30 @@ font-size: 17px;
     text-decoration: none;
     color:#0a0a0a;
 }
+.video-wrapper {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-bottom:10px;
+}
+iframe{
+    width: 100%;
+    height: auto;
+}
+.videoArea{
+    position: relative;
+    padding-bottom: 56.25%; /*16:9 */
+    height: 0;
+}
+.videoArea iframe {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+.banner_clipped {
+    overflow: hidden;
+}
+.banner_fluid{
+    width: 100%;
+    max-width: 800px;
+ }
