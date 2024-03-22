@@ -112,6 +112,7 @@ font-size: 17px;
 }
 .dropdown-content a:hover {
     background-color: #1c2541;
+    color: #f0f6f6 ;
   }
 
 .dropdown:hover .dropdown-content {
