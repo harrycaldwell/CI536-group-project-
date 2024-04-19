@@ -137,6 +137,7 @@ font-size: 17px;
     margin-top: 15px;
     justify-content: center; /* Align items horizontally to the center */
     align-items: center; /* Align items vertically to the center */
+    overflow: hidden;
   }
 
 .flip-card{
@@ -147,7 +148,9 @@ font-size: 17px;
     border: 1px solid #f1f1f1;
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
     margin-right: 20px;
+    margin-top: 10px;
     flex: 0 0 auto; /*stops cards from getting bigger or smaller*/
+    clear: auto;
   }
   
   /* This container is needed to position the front and back side */
