@@ -15,6 +15,9 @@ h3{
     
 }
 
+
+
+
 /*----Nav bar section----*/
 /* Container for the nav bar*/
 .topnav{
@@ -138,4 +141,11 @@ iframe{
 .banner_fluid{
     width: 100%;
     max-width: 800px;
+ }
+
+
+ /*Malware Course*/
+
+ .Course{
+    padding: 25px;
  }
