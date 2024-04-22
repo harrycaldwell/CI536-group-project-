@@ -3,6 +3,7 @@
     <!--Phishing Course-->
     <head>
         <link href="CSS/ModuleStyle.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> <!--**Adds arrow on drop down**-->
         <script src="JavaScript/.js"></script>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial scale=1">
@@ -16,18 +17,20 @@
         </div>
         <div class="Navbar">
             <div class="topnav" id="topnav">
-                <a href="Index.html" class="active">Home</a>
-                <div class="dropdown">
-                    <button class="dropdwn">Content <i class="fa fa-caret-down"></i></button>
-                    <div class="dropdown-content">
-                        <a href="Malware.html">Malware</a>
-                        <a href="Phishing.html">Phishing</a>
-                        <a href="SocialE.html">Social Engineering</a>
-                        <a href="Pharming.html">Pharming</a>
-                        <a href="Passwords.html">Passwords</a>
+                <div class="topnav-left">
+                    <a href="Index.html" id="IndexBtn" class="active">Home</a>
+                    <div class="dropdown">
+                        <button class="dropdwn">Content <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-content">
+                            <a href="Malware.html">Malware</a>
+                            <a href="Phishing.html">Phishing</a>
+                            <a href="SocialE.html">Social Engineering</a>
+                            <a href="Pharming.html">Pharming</a>
+                            <a href="Passwords.html">Passwords</a>
+                        </div>
                     </div>
+                    <a href="About.html" id="AboutBtn">About</a>
                 </div>
-                <a href="About.html">About</a>
                 <div class="topnav-right">
                     <div class="Save">
                         <a href="">Save</a>

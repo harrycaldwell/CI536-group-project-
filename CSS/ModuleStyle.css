@@ -16,6 +16,19 @@ h3{
     
 }
 
+/*----Course Content Styling----*/
+
+ .Course{
+    padding: 25px;
+    margin: 5px;
+    background-color: #F0F6F6;
+ }
+ .MalwareBox{
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: #92929296;
+    margin-top: 10px;
+ }
 
 
 
@@ -23,8 +36,6 @@ h3{
 /* Container for the nav bar*/
 .topnav{
 overflow: hidden;
-
-
 }
 
 /*Links inside the Navbar*/
@@ -34,13 +45,17 @@ text-align: center;
 padding: 13px;
 font-size: 17px;
 
+
 }
 
 /*On hover*/
 .topnav a:hover{
     color:#0a0a0a;
 }
-
+.topnav-left #AboutBtn, #IndexBtn{
+    background-color: #F0F6F6;
+    padding-bottom: 14px;
+}
 /* Right-aligned section inside the top navigation */
 .topnav-right {
   float: right;
@@ -68,8 +83,10 @@ font-size: 17px;
     overflow: hidden;
 }
 
+
 .dropdwn{
-    background-color: white;
+   background-color: #F0F6F6;
+   height: auto;
 }
 
 /*Controls the button itself*/
@@ -116,6 +133,8 @@ font-size: 17px;
     text-decoration: none;
     color:#0a0a0a;
 }
+
+/*Video CSS*/
 .video-wrapper {
     max-width: 960px;
     margin: 0 auto;
@@ -136,6 +155,7 @@ iframe{
     width: 100%;
     height: 100%;
   }
+
 .banner_clipped {
     overflow: hidden;
 }
@@ -145,10 +165,4 @@ iframe{
  }
 
 
- /*Malware Course*/
-
- .Course{
-    padding: 25px;
-    margin: 5px;
-    background-color: white;
- }
+ 
