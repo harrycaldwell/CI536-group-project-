@@ -130,15 +130,22 @@ font-size: 17px;
 /*-----Flip Cards---*/
 
 .card-container {
-    display: grid;
-    grid-template-columns: repeat(3, auto); /* 3 columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
-    margin-left: 50px;
-    margin-top: 15px;
-    justify-content: center; /* Align items horizontally to the center */
-    align-items: center; /* Align items vertically to the center */
-    overflow: hidden;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns by default */
+  grid-template-rows: auto auto; /* 2 rows with automatic height */
+  margin-left: 50px;
+  margin-top: 15px;
+  justify-content: center; /* Align items horizontally to the center */
+  align-items: center; /* Align items vertically to the center */
+  overflow: hidden;
+
+  /* Allows cards to change with screen size */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
 
 .flip-card{
     padding: 0px;
