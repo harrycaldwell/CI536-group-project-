@@ -2,7 +2,7 @@
     session_start();
 
     if (!empty($post)){
-        $conn = new sqli("localhost",dbusername,dirname,databasename);
+        $conn = new sqli("localhost","dbusername","pword","databasename");
             if ($conn->connection_error);{
                 die("connection failed: " . $conn->connect_error);
             }
