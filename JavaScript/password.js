@@ -1,4 +1,3 @@
-
 function generatePassword() {
   const length = 16; // Length of the generated password
   const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -15,16 +14,16 @@ function generatePassword() {
 
   // Generate remaining characters
   for (let i = 4; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * (uppercaseChars.length + lowercaseChars.length + numbers.length + specialChars.length));
-    if (randomIndex < uppercaseChars.length) {
-      password += uppercaseChars[randomIndex];
-    } else if (randomIndex < uppercaseChars.length + lowercaseChars.length) {
-      password += lowercaseChars[randomIndex - uppercaseChars.length];
-    } else if (randomIndex < uppercaseChars.length + lowercaseChars.length + numbers.length) {
-      password += numbers[randomIndex - uppercaseChars.length - lowercaseChars.length];
-    } else {
-      password += specialChars[randomIndex - uppercaseChars.length - lowercaseChars.length - numbers.length];
-    }
+      const randomIndex = Math.floor(Math.random() * (uppercaseChars.length + lowercaseChars.length + numbers.length + specialChars.length));
+      if (randomIndex < uppercaseChars.length) {
+          password += uppercaseChars[randomIndex];
+      } else if (randomIndex < uppercaseChars.length + lowercaseChars.length) {
+          password += lowercaseChars[randomIndex - uppercaseChars.length];
+      } else if (randomIndex < uppercaseChars.length + lowercaseChars.length + numbers.length) {
+          password += numbers[randomIndex - uppercaseChars.length - lowercaseChars.length];
+      } else {
+          password += specialChars[randomIndex - uppercaseChars.length - lowercaseChars.length - numbers.length];
+      }
   }
 
   // Break password into four sections with a "-"
@@ -32,39 +31,57 @@ function generatePassword() {
 
   document.getElementById("password").value = password;
 
-  
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById('quiz-form');
-    const submitBtn = document.getElementById('submit-btn');
-    const resultContainer = document.getElementById('result-container');
+  const questions = document.querySelectorAll('.question');
+  const submitBtn = document.getElementById('submit-btn');
+  const resultContainer = document.getElementById('result-container');
+  let currentQuestionIndex = 0;
+  let score = 0;
 
-    submitBtn.addEventListener('click', function() {
-        const answers = [];
-        let score = 0;
+  // Function to show the next question
+  function showNextQuestion() {
+      if (currentQuestionIndex < questions.length - 1) {
+          questions[currentQuestionIndex].style.display = 'none';
+          currentQuestionIndex++;
+          questions[currentQuestionIndex].style.display = 'block';
+      } else {
+          submitBtn.textContent = 'Finish';
+          calculateResult();
+      }
+  }
 
-        // Get selected answers
-        for (let i = 1; i <= 10; i++) {
-            const selectedOption = document.querySelector(`input[name="q${i}"]:checked`);
-            if (selectedOption) {
-                answers.push(selectedOption.value);
-            }
-        }
+  // Function to calculate the result
+  function calculateResult() {
+      const totalQuestions = questions.length;
+      let correctAnswers = 0;
 
-        // Calculate score
-        answers.forEach(answer => {
-            switch (answer) {
-                case 'd':
-                    score += 1;
-                    break;
-                default:
-                    break;
-            }
-        });
-  
-        // Display result
-        const totalScore = (score / 10) * 100;
-        resultContainer.textContent = `Your final score is: ${totalScore}%`;
-    });
+      // Check each question for correct answer
+      questions.forEach(question => {
+          const selectedOption = question.querySelector(`input[name="${question.id}"]:checked`);
+          if (selectedOption && selectedOption.value === question.dataset.correctAnswer) {
+              correctAnswers++;
+          }
+      });
+
+      // Calculate score percentage
+      score = (correctAnswers / totalQuestions) * 100;
+
+      // Display result
+      resultContainer.textContent = `Your final score is: ${score}%`;
+  }
+
+  // Initially hide all questions except the first one
+  for (let i = 1; i < questions.length; i++) {
+      questions[i].style.display = 'none';
+  }
+
+  // Event listener for submit button
+  submitBtn.addEventListener('click', function() {
+      // Show next question or calculate result if it's the last question
+      showNextQuestion();
+  });
 });
+
