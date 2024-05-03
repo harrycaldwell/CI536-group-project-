@@ -2,6 +2,8 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    justify-content: center;
+    align-items: center;
     }
 
 .container{
@@ -126,6 +128,16 @@ font-size: 17px;
     text-decoration: none;
     color:#0a0a0a;
 }
+
+
+.card-container {
+  max-width: 1000px; /* Adjust the value as per your requirement */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+
+
+
 
 /*-----Flip Cards---*/
 
