@@ -14,19 +14,23 @@ body{
     clear: both;
 }
 
+
+a.active{color :#f0f6f6;
+  background-color: #1c2541;}
+
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
+  margin-top: 10px;
     width: 100%;
-    background-color: #333;
-    color: #fff;
+    background-color: #6290cb;
+    color: #1c2541;
     text-align: center;
+    border-top: 1px solid black;
 }
 
 /*Header*/
 .header{
     text-align: center;
+    color: #1c2541;
     
 }
 
@@ -77,10 +81,13 @@ font-size: 17px;
 .dropdown{
     float: left;
     overflow: hidden;
+    color :#f0f6f6;
+    background-color: #1c2541;
 }
 
 .dropdwn{
-    background-color: white;
+    color :#f0f6f6;
+    background-color: #1c2541;
 }
 
 /*Controls the button itself*/
@@ -126,7 +133,7 @@ font-size: 17px;
 .dropdown-content a,
 .footer a {
     text-decoration: none;
-    color:#0a0a0a;
+    color:#f0f6f6;
 }
 
 
@@ -200,11 +207,13 @@ font-size: 17px;
   .flip-card-front {
     background-color: #bbb;
     color: black;
+    border: 1px solid black;
   }
   
   /* Style the back side */
   .flip-card-back {
-    background-color: dodgerblue;
-    color: white;
+    background-color: #6290cb;
+    color: #0a0a0a;
     transform: rotateY(180deg);
+    border: 1px solid black;
   }
