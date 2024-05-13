@@ -31,9 +31,9 @@
                 <div class="topnav-right">
                         <?php
                 if (isset($_COOKIE["username"])) {
-                    echo '<div class="logout">
+                    echo '<div class="dropdown">
                             <button class="user">Welcome ' . $_COOKIE["username"] . ' <i class="fa fa-caret-down"></i></button>
-                            <div class="logout-content">
+                            <div class="dropdown-content">
                                 <a href="Logout.php">Logout</a>
                             </div>
                           </div>';
