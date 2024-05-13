@@ -16,7 +16,9 @@ body{
 
 
 a.active{color :#f0f6f6;
-  background-color: #1c2541;}
+  background-color: #1c2541;
+  height: 20.5px;
+}
 
 footer {
   margin-top: 10px;
