@@ -1,5 +1,6 @@
 <?php
-
+  // Check if the username cookie is set
+  $isLoggedIn = isset($_COOKIE["username"]);
 ?>
 
 <!DOCTYPE html>
@@ -34,20 +35,23 @@
       </div>
       <a href="About.html" class="active">About</a>
       <div class="topnav-right">
-        <div class="login">
-          <a href="login.php">Login</a>
-        </div>
-        <div class="sign_up">
-          <a href="Signup.php">Sign Up</a>
-        </div>
+        <?php if ($isLoggedIn) { ?>
+          <button class="user">Welcome <?php echo $_COOKIE["username"]; ?></button>
+        <?php } else { ?>
+          <div class="login">
+            <a href="login.php">Login</a>
+          </div>
+          <div class="sign_up">
+            <a href="Signup.php">Sign Up</a>
+          </div>
+        <?php } ?>
       </div>
     </div>
   </div>
   <div class="main">
 
     <div class="card-container">
-     
-      <a href="Passwords.html">
+     <a href="Passwords.html">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">

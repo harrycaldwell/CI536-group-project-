@@ -2,7 +2,7 @@
     session_start();
 
     if (!empty($_POST)){
-        $conn = new mysqli(");
+        $conn = new mysqli("localhost","hc899_GpDBadmin","GpDBadmin","hc899_GpDB");
         if ($conn->connect_error){
             die("connection failed: " . $conn->connect_error);
         }
@@ -11,7 +11,8 @@
         while($record = mysqli_fetch_assoc($result)){
             if($record["userEmail"] == $_POST['email'] && $record["userPassword"]== $_POST['password'] ){
                 $_SESSION["status"]= "loggedin";
-                header("Location: https://hc899.brighton.domains/Groupproject/Index.html");
+                setcookie("username", $_POST['email'], time() + (86400 * 30), "/"); // Takes the username as the email recorded from $POST
+                header("Location: https://hc899.brighton.domains/Groupproject/Index.php");
                 exit; // Add exit to stop further execution
             } 
         }    

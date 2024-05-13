@@ -6,7 +6,7 @@
     $password = $_POST["password"];
 
     if(!empty($_POST)){
-        $conn = new mysqli(");
+        $conn = new mysqli("localhost","hc899_GpDBadmin","GpDBadmin","hc899_GpDB");
         if($conn->connect_error){
             die("connection failed: " . $conn->connect_error);
         }
