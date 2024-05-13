@@ -1,8 +1,31 @@
+<?php
+    session_start();
+
+    $username = $_POST["username"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+
+    if(!empty($_POST)){
+        $conn = new mysqli(");
+        if($conn->connect_error){
+            die("connection failed: " . $conn->connect_error);
+        }
+    
+
+        $sql ="INSERT INTO tAccounts (userName,userEmail,UserPassword) VALUES('$username','$email','$password')";
+        $result = mysqli_query($conn,$sql);
+        mysqli_close($conn);
+        echo "Account Created";
+        header("Location: https://hc899.brighton.domains/Groupproject/Index.html");
+        exit();
+    }
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <script type=”application/php” src="PHP/signup.php"></script> 
+<head> 
     <meta charset="utf-8"> 
     <link rel="stylesheet" href="CSS/LoginSignup.css">
     <title>Sign up</title>

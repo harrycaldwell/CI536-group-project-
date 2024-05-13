@@ -21,18 +21,18 @@
     <div class="Navbar">
         <div class="topnav" id="topnav">
             <div class="topnav-left">
-                <a href="Index.html" id="IndexBtn" class="active">Home</a>
+            <a href="Index.php" id="IndexBtn" class="active">Home</a>
                 <div class="dropdown">
                     <button class="dropdwn">Content <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
-                        <a href="Malware.html">Malware</a>
-                        <a href="Phishing.html">Phishing</a>
-                        <a href="SocialE.html">Social Engineering</a>
-                        <a href="Pharming.html">Pharming</a>
-                        <a href="Passwords.html">Passwords</a>
+                        <a href="Malware.php">Malware</a>
+                        <a href="Phishing.php">Phishing</a>
+                        <a href="SocialE.php">Social Engineering</a>
+                        <a href="Pharming.php">Pharming</a>
+                        <a href="Passwords.php">Passwords</a>
                     </div>
                 </div>
-                <a href="About.html" id="AboutBtn">About</a>
+                <a href="About.php" id="AboutBtn">About</a>
             </div>
             
         </div>
