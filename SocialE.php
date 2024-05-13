@@ -29,10 +29,24 @@
                 <a href="About.php" id="AboutBtn">About</a>
                 </div>
                 <div class="topnav-right">
-                    <div class="Save">
-                        <a href="">Save</a>
-                    </div>
-    
+                        <?php
+                if (isset($_COOKIE["username"])) {
+                    echo '<div class="logout">
+                            <button class="user">Welcome ' . $_COOKIE["username"] . ' <i class="fa fa-caret-down"></i></button>
+                            <div class="logout-content">
+                                <a href="Logout.php">Logout</a>
+                            </div>
+                          </div>';
+                } else {
+                    echo '<div class="login">
+                            <a href="login.php">Login</a>
+                          </div>
+                          <div class="sign_up">
+                            <a href="Signup.php">Sign Up</a>
+                          </div>';
+                }
+                ?>
+                  </div>
                 </div>
             </div>
         </div>

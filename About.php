@@ -18,25 +18,36 @@
     </div>
     <div class="Navbar">
         <div class="topnav" id="topnav">
-            <a href="Index.html" class="active">Home</a>
+            <a href="Index.php" class="active">Home</a>
             <div class="dropdown">
                 <button class="dropdwn">Content</button>
                 <div class="dropdown-content">
-                    <a href="Malware.html">Malware</a>
-                    <a href="Phishing.html">Phishing</a>
-                    <a href="SocialE.html">Social Engineering</a>
-                    <a href="Pharming.html">Pharming</a>
-                    <a href="Passwords.html">Passwords</a>
+                    <a href="Malware.php">Malware</a>
+                    <a href="Phishing.php">Phishing</a>
+                    <a href="SocialE.php">Social Engineering</a>
+                    <a href="Pharming.php">Pharming</a>
+                    <a href="Passwords.php">Passwords</a>
                 </div>
             </div>
-            <a href="About.html" class="active">About</a>
+            <a href="About.php" class="active">About</a>
             <div class="topnav-right">
-                <div class="login">
-                    <a href="login.php">Login</a>
-                </div>
-                <div class="sign_up">
-                    <a href="Signup.php">Sign Up</a>
-                </div>
+                        <?php
+                if (isset($_COOKIE["username"])) {
+                    echo '<div class="logout">
+                            <button class="user">Welcome ' . $_COOKIE["username"] . ' <i class="fa fa-caret-down"></i></button>
+                            <div class="logout-content">
+                                <a href="Logout.php">Logout</a>
+                            </div>
+                          </div>';
+                } else {
+                    echo '<div class="login">
+                            <a href="login.php">Login</a>
+                          </div>
+                          <div class="sign_up">
+                            <a href="Signup.php">Sign Up</a>
+                          </div>';
+                }
+                ?>
             </div>
         </div>
     </div>
