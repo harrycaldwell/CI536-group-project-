@@ -16,7 +16,7 @@
         $result = mysqli_query($conn,$sql);
         mysqli_close($conn);
         echo "Account Created";
-        header("Location: https://hc899.brighton.domains/Groupproject/Index.html");
+        header("Location: https://hc899.brighton.domains/Groupproject/Login.php");
         exit();
     }
 ?>
@@ -45,7 +45,7 @@
         <div class="Signup-wrapper">
             <div class="Signup-box">
                 <h2>Sign Up</h2>
-                <form action="signup.php" method="post">
+                <form action="" method="post">
                     <div>
                         <input type="text" name="username" placeholder="Username" required>
                     </div>

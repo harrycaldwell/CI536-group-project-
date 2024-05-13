@@ -35,16 +35,23 @@
       </div>
       <a href="About.html" class="active">About</a>
       <div class="topnav-right">
-        <?php if ($isLoggedIn) { ?>
-          <button class="user">Welcome <?php echo $_COOKIE["username"]; ?></button>
-        <?php } else { ?>
-          <div class="login">
-            <a href="login.php">Login</a>
-          </div>
-          <div class="sign_up">
-            <a href="Signup.php">Sign Up</a>
-          </div>
-        <?php } ?>
+      <?php
+                if (isset($_COOKIE["username"])) {
+                    echo '<div class="logout">
+                            <button class="user">Welcome ' . $_COOKIE["username"] . ' <i class="fa fa-caret-down"></i></button>
+                            <div class="logout-content">
+                                <a href="Logout.php">Logout</a>
+                            </div>
+                          </div>';
+                } else {
+                    echo '<div class="login">
+                            <a href="login.php">Login</a>
+                          </div>
+                          <div class="sign_up">
+                            <a href="Signup.php">Sign Up</a>
+                          </div>';
+                }
+                ?>
       </div>
     </div>
   </div>
