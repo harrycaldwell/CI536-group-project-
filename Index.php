@@ -1,3 +1,7 @@
+<?php
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,10 +35,10 @@
       <a href="About.html" class="active">About</a>
       <div class="topnav-right">
         <div class="login">
-          <a href="login.html">Login</a>
+          <a href="login.php">Login</a>
         </div>
         <div class="sign_up">
-          <a href="Signup.html">Sign Up</a>
+          <a href="Signup.php">Sign Up</a>
         </div>
       </div>
     </div>
