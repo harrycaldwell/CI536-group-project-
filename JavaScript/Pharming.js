@@ -38,8 +38,31 @@ document.addEventListener("DOMContentLoaded", function () {
         const resultContainer = document.getElementById("result");
         resultContainer.innerHTML = "Your score: " + score + " out of " + Object.keys(correctAnswers).length;
 
-        if (score == 10) {
-            //DO SOMETHING TO DATABASE
-        }
+        //This section is what connects to the PHP file
+        const scriptName = "Pharming.js"; //This will be changed based on what script it is in
+
+        // Call the sendScore function with the score and scriptName
+        sendScore(score, scriptName);
     });
+
+    // Define the sendScore function outside of the event listener
+    function sendScore(score, scriptName) {
+        fetch('QuizScore.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName)
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Score submitted successfully.');
+            } else {
+                console.error('Failed to submit score.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    }
 });
