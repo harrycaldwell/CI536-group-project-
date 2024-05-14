@@ -1,24 +1,24 @@
 <?php
-    session_start();
+session_start();
 
+if(!empty($_POST)){
     $username = $_POST["username"];
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    if(!empty($_POST)){
-        $conn = new mysqli("localhost","hc899_GpDBadmin","GpDBadmin","hc899_GpDB");
-        if($conn->connect_error){
-            die("connection failed: " . $conn->connect_error);
-        }
-    
-
-        $sql ="INSERT INTO tAccounts (userName,userEmail,UserPassword) VALUES('$username','$email','$password')";
-        $result = mysqli_query($conn,$sql);
-        mysqli_close($conn);
-        echo "Account Created";
-        header("Location: https://hc899.brighton.domains/Groupproject/Login.php");
-        exit();
+    $conn = new mysqli("localhost","hc899_GpDBadmin","GpDBadmin","hc899_GpDB");
+    if($conn->connect_error){
+        die("connection failed: " . $conn->connect_error);
     }
+
+    $sql ="INSERT INTO tAccounts (userName,userEmail,UserPassword) VALUES('$username','$email','$password')";
+    $result = mysqli_query($conn,$sql);
+    mysqli_close($conn);
+
+    echo "Account Created";
+    header("Location: https://hc899.brighton.domains/Groupproject/Login.php");
+    exit();
+}
 ?>
 
 
