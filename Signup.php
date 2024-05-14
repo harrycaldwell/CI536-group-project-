@@ -15,8 +15,7 @@ if(!empty($_POST)){
     $result = mysqli_query($conn,$sql);
     mysqli_close($conn);
 
-    echo "Account Created";
-    header("Location: https://hc899.brighton.domains/Groupproject/Login.php");
+    header("Location: https://hc899.brighton.domains/Groupproject/login.php");
     exit();
 }
 ?>
