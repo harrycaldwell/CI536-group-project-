@@ -17,7 +17,22 @@
         //Switch statement that goes through each case based on scriptName
         switch($scriptName){
             case Pharming:
-                mysqli_query($conn, "INSERT INTO modulePharming (userName, Score");
+                mysqli_query($conn, "INSERT INTO modulePharming (userName, Score") VALUES ("userName, score");
+                break;
+            case password:
+                mysqli_query($conn, "INSERT INTO modulePassword (userName, Score") VALUES ("userName, score");
+                break;
+            case Malware:
+                mysqli_query($conn, "INSERT INTO moduleMalware (userName, Score") VALUES ("userName, score");
+                break;
+            case Social:
+                mysqli_query($conn, "INSERT INTO moduleSocial (userName, Score") VALUES ("userName, score");
+                break;
+            case Phishing:
+                mysqli_query($conn, "INSERT INTO modulePhishing (userName, Score") VALUES ("userName, score");
+                break;
         }
-
-    }
+        else{
+            echo 'The scriptName is invalid';
+        }
+    };
