@@ -6,12 +6,12 @@
         if ($conn->connect_error){
             die("connection failed: " . $conn->connect_error);
         }
-        $sql="SELECT userEmail,userPassword FROM tAccounts";
+        $sql="SELECT userEmail,userPassword, userName FROM tAccounts";
         $result = mysqli_query($conn, $sql);
         while($record = mysqli_fetch_assoc($result)){
             if($record["userEmail"] == $_POST['email'] && $record["userPassword"]== $_POST['password'] ){
                 $_SESSION["status"]= "loggedin";
-                setcookie("username", $_POST['email'], time() + (86400 * 30), "/"); // Takes the username as the email recorded from $POST
+                setcookie("username", $record['userName'], time() + (86400 * 30), "/"); // Takes the username as the username recorded from $reord
                 header("Location: https://hc899.brighton.domains/Groupproject/Index.php");
                 exit; // Add exit to stop further execution
             } 

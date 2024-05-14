@@ -1,8 +1,3 @@
-<?php
-  // Check if the username cookie is set
-  $isLoggedIn = isset($_COOKIE["username"]);
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
