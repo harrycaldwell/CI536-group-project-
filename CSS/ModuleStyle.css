@@ -14,11 +14,13 @@ h3 {
 #BBC{
     max-width: 35em;
     height: auto;
-    min-width: none;
 }
 
-
-
+@media only screen and (max-width: 600px) {
+    #BBC {
+      width: 17em;
+    }
+  }
 
 .btn:hover {
     border-radius: 25px;
