@@ -53,7 +53,7 @@
   <div class="main">
 
     <div class="card-container">
-     <a href="Passwords.html">
+     <a href="Passwords.php">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -68,7 +68,7 @@
         </div>
       </a>
 
-      <a href="Pharming.html">
+      <a href="Pharming.php">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -83,7 +83,7 @@
         </div>
       </a>
 
-      <a href="Phishing.html">
+      <a href="Phishing.php">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -99,7 +99,7 @@
       </a>
 
 
-      <a href="SocialE.html">
+      <a href="SocialE.php">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -114,7 +114,7 @@
         </div>
       </a>
 
-      <a href="Malware.html">
+      <a href="Malware.php">
         <div class="flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">

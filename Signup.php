@@ -60,7 +60,7 @@ if(!empty($_POST)){
                     <div>
                         <input type="submit" value="Sign Up">
                     </div> 
-                    <div><a href="Index.html" id="HomeButton">Back to Home</a></div>
+                    <div><a href="Index.php" id="HomeButton">Back to Home</a></div>
                     
                 </form>
                
