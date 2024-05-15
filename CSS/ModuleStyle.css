@@ -11,7 +11,11 @@ h3 {
     text-align: left;
 }
 
-
+#BBC{
+    max-width: 35em;
+    height: auto;
+    min-width: none;
+}
 
 
 
