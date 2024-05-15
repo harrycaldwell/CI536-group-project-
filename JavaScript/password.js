@@ -35,125 +35,110 @@ function generatePassword() {
 }
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const questions = document.querySelectorAll('.question');
-    const submitBtn = document.getElementById('submit-btn');
-    const quizForm = document.getElementById('quiz-form');
+    document.addEventListener("DOMContentLoaded", function () {
+        const questions = document.querySelectorAll('.question');
+        const submitBtn = document.getElementById('submit-btn');
+        const quizForm = document.getElementById('quiz-form');
 
-    let currentQuestionIndex = 0;
+        let currentQuestionIndex = 0;
 
-    // Function to show the next question
-    function showNextQuestion() {
-        if (currentQuestionIndex < questions.length - 1) {
-            questions[currentQuestionIndex].style.display = 'none';
-            currentQuestionIndex++;
-            questions[currentQuestionIndex].style.display = 'block';
-        } else {
-            submitBtn.textContent = 'Finish';
-            calculateResult();
-        }
-    }
-
-    // Initially hide all questions except the first one
-    for (let i = 1; i < questions.length; i++) {
-        questions[i].style.display = 'none';
-    }
-
-    // Event listener for submit button
-    submitBtn.addEventListener('click', function () {
-        // Show next question or calculate result if it's the last question
-        showNextQuestion();
-    });
-
-
-
-
-
-    
-    // Event listener for form submission
-    quizForm.addEventListener('submit', function (event) {
-        event.preventDefault(); // Prevent form submission from refreshing the page
-        calculateResult(); // Calculate result when form is submitted
-    });
-    // Define correct answers
-    const correctAnswers = {
-        q1: "d",
-        q2: "c",
-        q3: "c",
-        q4: "c",
-        q5: "c",
-        q6: "b",
-        q7: "d",
-        q8: "a",
-        q9: "a",
-        q10: "b"
-    };
-    // Function to calculate result and call functions to update
-    function calculateResult() {
-        let score = 0;
-
-        // Loop through each question
-        for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
-            const questionName = "q" + i;
-            const selectedAnswer = document.querySelector("input[name='" + questionName + "']:checked");
-
-            // Check if answer is selected for each question
-            if (selectedAnswer) {
-                // Check if selected answer is correct
-                if (selectedAnswer.value === correctAnswers[questionName]) {
-                    score++;
-                }
+        // Function to show the next question
+        function showNextQuestion() {
+            if (currentQuestionIndex < questions.length - 1) {
+                questions[currentQuestionIndex].style.display = 'none';
+                currentQuestionIndex++;
+                questions[currentQuestionIndex].style.display = 'block';
+            } else {
+                submitBtn.textContent = 'Finish';
+                calculateResult();
             }
         }
-        //update screen
-        displayScore(score);
 
-        //This section is what connects to the PHP file
-        const scriptName = "password.js"; //This will be changed based on what script it is in
+        // Initially hide all questions except the first one
+        for (let i = 1; i < questions.length; i++) {
+            questions[i].style.display = 'none';
+        }
 
-        // Call the sendScore function with the score and scriptName
-        sendScore(score, scriptName);
-        /*
-                if (score == 10) {
-                    //DO SOMETHING TO DATABASE
+        // Event listener for submit button
+        submitBtn.addEventListener('click', function () {
+            // Show next question or calculate result if it's the last question
+            showNextQuestion();
+        });
+
+
+
+
+
         
-                    // Make AJAX request to update the database
-                    const xhr = new XMLHttpRequest();
-                    xhr.open("POST", "updateDatabase.php", true);
-                    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4 && xhr.status === 200) {
-                            // Handle response from the server if needed
-                            console.log(xhr.responseText);
-                        }
-                    };
-                    xhr.send(); // You can send data here if needed
-                }*/
-    }
+        // Event listener for form submission
+        quizForm.addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent form submission from refreshing the page
+            calculateResult(); // Calculate result when form is submitted
+        });
+        // Define correct answers
+        const correctAnswers = {
+            q1: "d",
+            q2: "c",
+            q3: "c",
+            q4: "c",
+            q5: "c",
+            q6: "b",
+            q7: "d",
+            q8: "a",
+            q9: "a",
+            q10: "b"
+        };
+        // Function to calculate result and call functions to update
+        function calculateResult() {
+            let score = 0;
 
-    function displayScore(score) {
-        // Display result
-        const resultContainer = document.getElementById("result");
-        resultContainer.innerHTML = "Your score: " + score + " out of " + Object.keys(correctAnswers).length;
-    }
-    // Define the sendScore function outside of the event listener
-    function sendScore(score, scriptName) {
-        fetch('QuizScore.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: 'score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName)
-        })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Score submitted successfully:' + score);
-                } else {
-                    console.error('Failed to submit score.');
+            // Loop through each question
+            for (let i = 1; i <= Object.keys(correctAnswers).length; i++) {
+                const questionName = "q" + i;
+                const selectedAnswer = document.querySelector("input[name='" + questionName + "']:checked");
+
+                // Check if answer is selected for each question
+                if (selectedAnswer) {
+                    // Check if selected answer is correct
+                    if (selectedAnswer.value === correctAnswers[questionName]) {
+                        score++;
+                    }
                 }
+            }
+            //update screen
+            displayScore(score);
+
+            //This section is what connects to the PHP file
+            const scriptName = "password.js"; //This will be changed based on what script it is in
+
+            // Call the sendScore function with the score and scriptName
+            sendScore(score, scriptName);
+                
+        }
+
+        function displayScore(score) {
+            // Display result
+            const resultContainer = document.getElementById("result");
+            resultContainer.innerHTML = "Your score: " + score + " out of " + Object.keys(correctAnswers).length;
+        }
+        // Define the sendScore function outside of the event listener
+        function sendScore(score, scriptName) {
+            fetch('./QuizScore.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName)
             })
-            .catch(error => {
-                console.error('Error:', error);
-            });
-    }
-});
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Score submitted successfully:' + score);
+                    } else {
+                        console.error('Failed to submit score.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        }
+    });
