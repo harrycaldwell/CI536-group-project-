@@ -21,7 +21,7 @@
     <div class="Navbar">
         <div class="topnav" id="topnav">
             <div class="topnav-left">
-            <a href="Index.php" id="IndexBtn" class="active">Home</a>
+                <a href="Index.php" id="IndexBtn" class="active">Home</a>
                 <div class="dropdown">
                     <button class="dropdwn">Content <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
@@ -35,7 +35,7 @@
                 <a href="About.php" id="AboutBtn">About</a>
             </div>
             <div class="topnav-right">
-                        <?php
+                <?php
                 if (isset($_COOKIE["username"])) {
                     echo '<div class="dropdown">
                             <button class="user">Welcome ' . $_COOKIE["username"] . ' <i class="fa fa-caret-down"></i></button>
@@ -68,22 +68,13 @@
         </ul>
         <div class="video-wrapper">
             <div class="videoArea">
-                <iframe width="420" height="315" src="https://www.youtube.com/embed/20FAWUVo3as?si=eRPm7HjRVwCdjXxH" title="Pharming Video"
+                <iframe width="420" height="315" src="https://www.youtube.com/embed/20FAWUVo3as?si=eRPm7HjRVwCdjXxH"
+                    title="Pharming Video"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen>
                 </iframe>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-
 
 
         <h2>What is Pharming.</h2>
@@ -127,81 +118,100 @@
         <h2>Quiz</h2>
 
         <form id="quizForm">
-            <ol>
-                <li>
-                    <strong>What is pharming?</strong><br>
+
+
+            <div id="question-1" class="question" data-correct-answer="C">
+                <span>What is pharming?</span>
+                <div>
                     <input type="radio" name="q1" value="A"> A) A fishing technique<br>
                     <input type="radio" name="q1" value="B"> B) A type of malware<br>
                     <input type="radio" name="q1" value="C"> C) A fraudulent website redirecting method<br>
                     <input type="radio" name="q1" value="D"> D) A type of computer virus<br>
-                </li>
-                <li>
-                    <strong>How does pharming differ from phishing?</strong><br>
+                </div>
+            </div>
+            <div id="question-2" class="question" data-correct-answer="B">
+                <span>How does pharming differ from phishing?</span>
+                <div>
                     <input type="radio" name="q2" value="A"> A) Pharming requires an initial click<br>
                     <input type="radio" name="q2" value="B"> B) Pharming lacks the lure or baiting aspect<br>
                     <input type="radio" name="q2" value="C"> C) Pharming operates only through email<br>
                     <input type="radio" name="q2" value="D"> D) Pharming is less harmful than phishing<br>
-                </li>
-                <li>
-                    <strong>What are the two main steps of pharming?</strong><br>
+                </div>
+            </div>
+            <div id="question-3" class="question" data-correct-answer="B">
+                <span>What are the two main steps of pharming?</span>
+                <div>
                     <input type="radio" name="q3" value="A"> A) Sending emails and clicking links<br>
                     <input type="radio" name="q3" value="B"> B) Installing harmful software and redirecting to a
                     counterfeit website<br>
                     <input type="radio" name="q3" value="C"> C) Stealing passwords and bank details<br>
                     <input type="radio" name="q3" value="D"> D) Hacking into social media accounts<br>
-                </li>
-                <li>
-                    <strong>What does pharming involve implanting on a computer or server?</strong><br>
+                </div>
+            </div>
+            <div id="question-4" class="question" data-correct-answer="A">
+                <span>What does pharming involve implanting on a computer or server?</span>
+                <div>
                     <input type="radio" name="q4" value="A"> A) Harmful software<br>
                     <input type="radio" name="q4" value="B"> B) Hardware devices<br>
                     <input type="radio" name="q4" value="C"> C) Pop-up ads<br>
                     <input type="radio" name="q4" value="D"> D) Anti-virus software<br>
-                </li>
-                <li>
-                    <strong>How does pharming manipulate the internet's address book?</strong><br>
+                </div>
+            </div>
+            <div id="question-5" class="question" data-correct-answer="B">
+                <span>How does pharming manipulate the internet's address book?</span>
+                <div>
                     <input type="radio" name="q5" value="A"> A) By hacking into social media accounts<br>
                     <input type="radio" name="q5" value="B"> B) By altering the domain name system (DNS)<br>
                     <input type="radio" name="q5" value="C"> C) By changing website passwords<br>
                     <input type="radio" name="q5" value="D"> D) By creating fake emails<br>
-                </li>
-                <li>
-                    <strong>What analogy is used to explain the DNS server's role?</strong><br>
+                </div>
+            </div>
+            <div id="question-6" class="question" data-correct-answer="A">
+                <span>What analogy is used to explain the DNS server's role?</span>
+                <div>
                     <input type="radio" name="q6" value="A"> A) Internet's GPS<br>
                     <input type="radio" name="q6" value="B"> B) Internet's encyclopedia<br>
                     <input type="radio" name="q6" value="C"> C) Internet's traffic signal<br>
                     <input type="radio" name="q6" value="D"> D) Internet's mailbox<br>
-                </li>
-                <li>
-                    <strong>What is the purpose of using HTTPS instead of HTTP?</strong><br>
+                </div>
+            </div>
+            <div id="question-7" class="question" data-correct-answer="B">
+                <span>What is the purpose of using HTTPS instead of HTTP?</span>
+                <div>
                     <input type="radio" name="q7" value="A"> A) To make websites load faster<br>
                     <input type="radio" name="q7" value="B"> B) To secure communication by encrypting data<br>
                     <input type="radio" name="q7" value="C"> C) To display more advertisements<br>
                     <input type="radio" name="q7" value="D"> D) To track user behavior<br>
-                </li>
-                <li>
-                    <strong>Why is it important to keep computers updated to protect against pharming?</strong><br>
+                </div>
+            </div>
+            <div id="question-8" class="question" data-correct-answer="C">
+                <span>Why is it important to keep computers updated to protect against pharming?</span>
+                <div>
                     <input type="radio" name="q8" value="A"> A) To make them look new<br>
                     <input type="radio" name="q8" value="B"> B) To prevent system crashes<br>
                     <input type="radio" name="q8" value="C"> C) To get fixes for security vulnerabilities<br>
                     <input type="radio" name="q8" value="D"> D) To increase internet speed<br>
-                </li>
-                <li>
-                    <strong>How does using a VPN help protect against pharming?</strong><br>
+                </div>
+            </div>
+            <div id="question-9" class="question" data-correct-answer="B">
+                <span>How does using a VPN help protect against pharming?</span>
+                <div>
                     <input type="radio" name="q9" value="A"> A) By making websites load faster<br>
                     <input type="radio" name="q9" value="B"> B) By encrypting internet traffic<br>
                     <input type="radio" name="q9" value="C"> C) By displaying more advertisements<br>
                     <input type="radio" name="q9" value="D"> D) By tracking user behavior<br>
-                </li>
-                <li>
-                    <strong>What precaution is recommended to protect against pharming when using a VPN?</strong><br>
+                </div>
+            </div>
+            <div id="question-10" class="question" data-correct-answer="C">
+                <span>What precaution is recommended to protect against pharming when using a VPN?</span>
+                <div>
                     <input type="radio" name="q10" value="A"> A) Using public Wi-Fi networks<br>
                     <input type="radio" name="q10" value="B"> B) Avoiding software updates<br>
                     <input type="radio" name="q10" value="C"> C) Choosing a VPN service with trustworthy DNS servers<br>
                     <input type="radio" name="q10" value="D"> D) Sharing passwords with friends<br>
-                </li>
-            </ol>
-            <input type="submit" value="Submit">
-
+                </div>
+            </div>
+            <button class="btn" type="button" id="submit-btn">Submit Answer</button>
         </form>
         <div id="result"></div>
     </div>

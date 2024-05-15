@@ -1,5 +1,5 @@
 <?php
-    session_start()
+    session_start();
 
     //Connect to the server
     $conn = new mysqli("localhost","hc899_GpDBadmin","GpDBadmin","hc899_GpDB");
