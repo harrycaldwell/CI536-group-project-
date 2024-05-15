@@ -6,7 +6,7 @@
     <link href="CSS/ModuleStyle.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <!--**Adds arrow on drop down**-->
-    <script src="JavaScript/.js"></script>
+    <script src="JavaScript/Phishing.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial scale=1">
     <title>Course</title>
@@ -21,7 +21,7 @@
     <div class="Navbar">
         <div class="topnav" id="topnav">
             <div class="topnav-left">
-            <a href="Index.php" id="IndexBtn" class="active">Home</a>
+                <a href="Index.php" id="IndexBtn" class="active">Home</a>
                 <div class="dropdown">
                     <button class="dropdwn">Content <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-content">
@@ -35,7 +35,7 @@
                 <a href="About.php" id="AboutBtn">About</a>
             </div>
             <div class="topnav-right">
-                        <?php
+                <?php
                 if (isset($_COOKIE["username"])) {
                     echo '<div class="dropdown">
                             <button class="user">Welcome ' . $_COOKIE["username"] . ' <i class="fa fa-caret-down"></i></button>
@@ -115,84 +115,102 @@
 
         <h2>Quiz</h2>
         <form id="quizForm">
-            <ol>
-                <li>
-                    <strong>What is phishing?</strong><br>
+            <div id="question-1" class="question" data-correct-answer="B">
+                <span>What is phishing?</span>
+                <div>
                     <input type="radio" name="q1" value="A"> A) A fishing technique<br>
                     <input type="radio" name="q1" value="B"> B) A type of cyberattack involving deception<br>
                     <input type="radio" name="q1" value="C"> C) A method of catching phish<br>
                     <input type="radio" name="q1" value="D"> D) A type of computer virus<br>
-                </li>
-                <li>
-                    <strong>What is the purpose of phishing attacks against businesses?</strong><br>
+                </div>
+            </div>
+            <div id="question-2" class="question" data-correct-answer="B">
+                <span>What is the purpose of phishing attacks against businesses?</span>
+                <div>
                     <input type="radio" name="q2" value="A"> A) To promote cybersecurity awareness<br>
                     <input type="radio" name="q2" value="B"> B) To steal sensitive information or disrupt operations<br>
                     <input type="radio" name="q2" value="C"> C) To enhance employee productivity<br>
                     <input type="radio" name="q2" value="D"> D) To improve customer service<br>
-                </li>
-                <li>
-                    <strong>Whhat is Spear Phishing?</strong><br>
+                </div>
+            </div>
+            <div id="question-3" class="question" data-correct-answer="B">
+                <span>What is Spear Phishing?</span>
+                <div>
                     <input type="radio" name="q3" value="A"> A) A fishing technique using a spear<br>
                     <input type="radio" name="q3" value="B"> B) A targeted form of phishing<br>
                     <input type="radio" name="q3" value="C"> C) A method of catching fish in the ocean<br>
                     <input type="radio" name="q3" value="D"> D) A type of encryption algorithm<br>
-                </li>
-                <li>
-                    <strong>How can businesses protect against phishing attacks?</strong><br>
+                </div>
+            </div>
+            <div id="question-4" class="question" data-correct-answer="B">
+                <span>How can businesses protect against phishing attacks?</span>
+                <div>
                     <input type="radio" name="q4" value="A"> A) By installing more RAM<br>
                     <input type="radio" name="q4" value="B"> B) By deploying robust security measures such as email
                     filtering and MFA<br>
                     <input type="radio" name="q4" value="C"> C) By increasing social media presence<br>
                     <input type="radio" name="q4" value="D"> D) By reducing employee salaries<br>
-                </li>
-                <li>
-                    <strong>What is MFA/2FA?</strong><br>
+                </div>
+            </div>
+            <div id="question-5" class="question" data-correct-answer="C">
+                <span>What is MFA/2FA?</span>
+                <div>
                     <input type="radio" name="q5" value="A"> A) A mathematical equation<br>
                     <input type="radio" name="q5" value="B"> B) A type of computer virus<br>
                     <input type="radio" name="q5" value="C"> C) A security mechanism requiring multiple forms of
                     verification<br>
                     <input type="radio" name="q5" value="D"> D) A programming language<br>
-                </li>
-                <li>
-                    <strong>What is Pharming?</strong><br>
+                </div>
+            </div>
+            <div id="question-6" class="question" data-correct-answer="C">
+                <span>What is Pharming?</span>
+                <div>
                     <input type="radio" name="q6" value="A"> A) A type of agricultural practice<br>
                     <input type="radio" name="q6" value="B"> B) A type of fishing technique<br>
                     <input type="radio" name="q6" value="C"> C) A cyberattack redirecting users to fraudulent
                     websites<br>
                     <input type="radio" name="q6" value="D"> D) A method of harvesting crops<br>
-                </li>
-                <li>
-                    <strong>How can employees identify phishing emails?</strong><br>
+                </div>
+            </div>
+            <div id="question-7" class="question" data-correct-answer="B">
+                <span>How can employees identify phishing emails?</span>
+                <div>
                     <input type="radio" name="q7" value="A"> A) By hoping for the best<br>
                     <input type="radio" name="q7" value="B"> B) By checking for unusual language and verifying links<br>
-                    <input type="radio" name="q7" value="C"> C) By reporting every email, you get to IT/Security
-                    team<br>
+                    <input type="radio" name="q7" value="C"> C) By reporting every email you get to IT/Security team<br>
                     <input type="radio" name="q7" value="D"> D) By asking a colleague for reassurance<br>
-                </li>
-                <li>
-                    <strong>What should you do if you recieve a suspected phishing email?</strong><br>
-                    <input type="radio" name="q8" value="A"> A) Delete it immediately <br>
+                </div>
+            </div>
+            <div id="question-8" class="question" data-correct-answer="C">
+                <span>What should you do if you receive a suspected phishing email?</span>
+                <div>
+                    <input type="radio" name="q8" value="A"> A) Delete it immediately<br>
                     <input type="radio" name="q8" value="B"> B) Forward it to a colleague<br>
                     <input type="radio" name="q8" value="C"> C) Report it to their IT or security team<br>
                     <input type="radio" name="q8" value="D"> D) Respond with personal information<br>
-                </li>
-                <li>
-                    <strong>What role does employee education play in preventing phishing attacks?</strong><br>
+                </div>
+            </div>
+            <div id="question-9" class="question" data-correct-answer="C">
+                <span>What role does employee education play in preventing phishing attacks?</span>
+                <div>
                     <input type="radio" name="q9" value="A"> A) No role at all<br>
                     <input type="radio" name="q9" value="B"> B) Teaches employees to not trust any emails<br>
                     <input type="radio" name="q9" value="C"> C) A crucial role in raising awareness and teaching
                     recognition<br>
                     <input type="radio" name="q9" value="D"> D) A secondary role to advanced security software<br>
-                </li>
-                <li>
-                    <strong>How does phishing differ from other types of cyberattacks targeting businesses?</strong><br>
+                </div>
+            </div>
+            <div id="question-10" class="question" data-correct-answer="B">
+                <span>How does phishing differ from other types of cyberattacks targeting businesses?</span>
+                <div>
                     <input type="radio" name="q10" value="A"> A) It doesn't differ<br>
-                    <input type="radio" name="q10" value="B"> B) It relies deception and social engineering tactics<br>
-                    <input type="radio" name="q10" value="C"> C) It involved physical break-ins<br>
-                    <input type="radio" name="q10" value="D"> D) It only targets individual <br>
-                </li>
-            </ol>
-            <input type="submit" value="Submit">
+                    <input type="radio" name="q10" value="B"> B) It relies on deception and social engineering
+                    tactics<br>
+                    <input type="radio" name="q10" value="C"> C) It involves physical break-ins<br>
+                    <input type="radio" name="q10" value="D"> D) It only targets individuals<br>
+                </div>
+            </div>
+            <button class="btn" type="button" id="submit-btn">Submit Answer</button>
 
         </form>
         <div id="result"></div>
