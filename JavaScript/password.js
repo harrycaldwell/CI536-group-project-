@@ -117,28 +117,27 @@ function generatePassword() {
         }
 
         function displayScore(score) {
-            // Display result
+            // Display result   
             const resultContainer = document.getElementById("result");
             resultContainer.innerHTML = "Your score: " + score + " out of " + Object.keys(correctAnswers).length;
         }
         // Define the sendScore function outside of the event listener
         function sendScore(score, scriptName) {
-            fetch('./QuizScore.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName)
+            // Create the URL with the score and scriptName as query parameters
+            const url = './QuizScore.php?score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName);
+        
+            fetch(url, {
+                method: 'GET',
             })
-                .then(response => {
-                    if (response.ok) {
-                        console.log('Score submitted successfully:' + score);
-                    } else {
-                        console.error('Failed to submit score.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
+            .then(response => {
+                if (response.ok) {
+                    console.log('Score submitted successfully:' + score);
+                } else {
+                    console.error('Failed to submit score.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
     });
