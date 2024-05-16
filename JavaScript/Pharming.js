@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    document.getElementById("quizForm").addEventListener("submit", function (event) {
+    quizForm.addEventListener('submit', function (event) {
         event.preventDefault(); // Prevent form submission from refreshing the page
-        calculateResult();
+        calculateResult(); // Calculate result when form is submitted
     });
 
     //calculate result and call functions to update screen/database
@@ -84,22 +84,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Define the sendScore function outside of the event listener
     function sendScore(score, scriptName) {
-        fetch('QuizScore.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: 'score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName)
+        // Create the URL with the score and scriptName as query parameters
+        const url = './QuizScore.php?score=' + encodeURIComponent(score) + '&scriptName=' + encodeURIComponent(scriptName);
+    
+        fetch(url, {
+            method: 'GET',
         })
-            .then(response => {
-                if (response.ok) {
-                    console.log('Score submitted successfully.'+score);
-                } else {
-                    console.error('Failed to submit score.');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        .then(response => {
+            if (response.ok) {
+                console.log('Score submitted successfully:' + score);
+            } else {
+                console.error('Failed to submit score.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     }
 });

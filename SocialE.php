@@ -128,7 +128,7 @@
       or Pharming to maximise their effectiveness. In basic terms a
     </p>
     <h2>Quiz</h2>
-    <form id="quizForm">
+    <form id="quiz-form">
       <div id="question-1" class="question" data-correct-answer="C">
         <h3>What is social engineering?</h3>
         <div>

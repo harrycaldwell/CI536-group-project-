@@ -25,7 +25,10 @@
         // Switch statement that goes through each case based on scriptName
         switch($scriptName){
             case "Pharming.js":
-                mysqli_query($conn, "INSERT INTO modulePharming (userName, Score) VALUES ('$userName', $score)");
+                $result = mysqli_query($conn, "INSERT INTO modulePharming (userName, score) VALUES ('$userName', $score)");
+                if (!$result) {
+                    die('Error executing query: ' . mysqli_error($conn));
+                }
                 break;
             case "password.js":
                 $result = mysqli_query($conn, "INSERT INTO modulePasswords (userName, score) VALUES ('$userName', $score)");
@@ -35,13 +38,22 @@
                 echo "suck my cock i got it to work";
                 break;
             case "Malware.js":
-                mysqli_query($conn, "INSERT INTO moduleMalware (userName, Score) VALUES ('$userName', $score)");
+                $result = mysqli_query($conn, "INSERT INTO moduleMalware (userName, score) VALUES ('$userName', $score)");
+                if (!$result) {
+                    die('Error executing query: ' . mysqli_error($conn));
+                }
                 break;
-            case "Social.js":
-                mysqli_query($conn, "INSERT INTO moduleSocial (userName, Score) VALUES ('$userName', $score)");
+            case "SocialE.js":
+                $result = mysqli_query($conn, "INSERT INTO moduleSocial (userName, score) VALUES ('$userName', $score)");
+                if (!$result) {
+                    die('Error executing query: ' . mysqli_error($conn));
+                }
                 break;
             case "Phishing.js":
-                mysqli_query($conn, "INSERT INTO modulePhishing (userName, Score) VALUES ('$userName', $score)");
+                $result = mysqli_query($conn, "INSERT INTO modulePhising (userName, score) VALUES ('$userName', $score)");
+                if (!$result) {
+                    die('Error executing query: ' . mysqli_error($conn));
+                }
                 break;
             default:
                 echo 'The scriptName is invalid';

@@ -65,11 +65,6 @@ function generatePassword() {
             showNextQuestion();
         });
 
-
-
-
-
-        
         // Event listener for form submission
         quizForm.addEventListener('submit', function (event) {
             event.preventDefault(); // Prevent form submission from refreshing the page
