@@ -4,6 +4,7 @@ body{
     margin: 0;
     justify-content: center;
     align-items: center;
+
     }
 
 .container{
@@ -16,7 +17,7 @@ body{
 
 
 a.active{color :#f0f6f6;
-  background-color: #1c2541;
+  background-color: #6290cb;
   height: 20.5px;
 }
 
@@ -27,12 +28,14 @@ footer {
     color: #1c2541;
     text-align: center;
     border-top: 1px solid black;
+  
 }
 
 /*Header*/
 .header{
     text-align: center;
     color: #1c2541;
+
     
 }
 
@@ -89,7 +92,7 @@ font-size: 17px;
 
 .dropdwn{
     color :#f0f6f6;
-    background-color: #1c2541;
+    background-color: #6290cb;
 }
 
 /*Controls the button itself*/
@@ -163,6 +166,9 @@ font-size: 17px;
   /* Allows cards to change with screen size */
   display: flex;
   flex-wrap: wrap;
+    margin: auto;
+    width: 70%;
+    padding: 10px;
 }
 
 
@@ -219,3 +225,13 @@ font-size: 17px;
     transform: rotateY(180deg);
     border: 1px solid black;
   }
+
+  h1 {   color:#1c2541}
+
+  header {background-color: #1c2541;
+  margin : 0}
+
+  .Navbar {    background-color: #1c2541;}
+
+  footer {margin-top: 174px;}
+

@@ -61,8 +61,8 @@
             </div>
             <div class="flip-card-back">
               <h1>Passwords</h1>
-              <p>Subtitle</p>
-              <p>Description</p>
+            
+              <p>Your passwords are the barrier between intruders and the companys system, learn how to keep them secure and in doing so, keep the company secure.</p>
             </div>
           </div>
         </div>
@@ -76,8 +76,8 @@
             </div>
             <div class="flip-card-back">
               <h1>Pharming</h1>
-              <p>Subtitle</p>
-              <p>Description</p>
+            
+              <p>Learn what to look out for so you don't accidentally fall victim to a scam website.</p>
             </div>
           </div>
         </div>
@@ -91,8 +91,8 @@
             </div>
             <div class="flip-card-back">
               <h1>Phishing</h1>
-              <p>Subtitle</p>
-              <p>Description</p>
+        
+              <p>You recieve thousands of eamails a year, learn which ones are legitimate and which ones might land you in a mess.</p>
             </div>
           </div>
         </div>
@@ -107,8 +107,8 @@
             </div>
             <div class="flip-card-back">
               <h1>Social</h1>
-              <p>Subtitle</p>
-              <p>Description</p>
+ 
+              <p>All the companys hard work to maintain a secure system and keep its employees, workers and data safe can be undone by trusting one wrong person with a small detail they shouldnt have.</p>
             </div>
           </div>
         </div>
@@ -122,10 +122,8 @@
             </div>
             <div class="flip-card-back">
               <h1>Malware</h1>
-              <p>Malware - Information and Prevention</p>
-              <p>This course will inform you on what malware is
-                and the different forms they come in. You will also learn
-                how it spreads and what you can do to fight it; protecting yourself and your machine.</p>
+           
+              <p>This course will teach what malware is. You will also learn how it spreads and what you can do to fight it, protecting yourself and the company.</p>
             </div>
           </div>
         </div>
@@ -133,8 +131,10 @@
 
     </div>
   </div>
-</body>
-<footer>
-  hello
+  <footer>
+CI536 Group Project by: Emanuel Leskaj, Ethan Tourle, Harry Caldwell, Libbi Poncia-Raccani, Seb Dutton, Jared Smith
 </footer>
+</body>
+
+
 </html>
