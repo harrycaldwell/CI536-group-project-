@@ -8,9 +8,9 @@
     }
 
     //Score on the quiz
-    $score = $_POST[score];
+    $score = $_POST['score'];
     //The name of the Javascript file
-    $scriptName = $_POST[scriptName];
+    $scriptName = $_POST['scriptName'];
     //Username
     $userName = $_COOKIE['username'];
     
